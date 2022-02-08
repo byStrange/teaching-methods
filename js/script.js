@@ -16,3 +16,11 @@ class Person {
 let person = new Person('John ', 5)
 // person.method1()
 person.run()
+
+let persons = [];
+
+for (let i = 0; i < 40; i++) {
+  persons.push(new Person())
+}
+
+console.log(persons)
