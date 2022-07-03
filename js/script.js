@@ -1,26 +1,26 @@
+function _person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
 class Person {
-  constructor(name, age){
-    this.name= name;
+  constructor(name, age) {
+    this.name = name;
     this.age = age;
   }
-  method1() {
-    console.log(this)
-    console.log(typeof this)
+
+  static name = 'Person';
+  static sum(arr) {
+    return arr.reduce((prev, curr) => prev + curr);
   }
+
   run() {
-    console.log(this.name + ' ran away')
-    console.log("when he was " + this.age)
+    console.log(`${this.name} is running`);
   }
+
 }
 
-let person = new Person('John ', 5)
-// person.method1()
-person.run()
 
-let persons = [];
-
-for (let i = 0; i < 40; i++) {
-  persons.push(new Person())
-}
-
-console.log(persons)
+console.log(new Person().run())
+console.log(Person.sum([1, 2, 3]))
+console.log(Person.name)
